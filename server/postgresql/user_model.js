@@ -8,7 +8,7 @@ const connectionString = `postgresql://${process.env.PSQL_DATABASE_USERNAME}:${p
 
 // comment out ssl in development
 const pool = new Pool({
-    connectionString: isProduction ? process.env.DATABASE_URL : connectionString,
+    connectionString: isProduction ? process.env.HEROKU_POSTGRESQL_CYAN_URL : connectionString,
     ssl: {
         require: true,
         rejectUnauthorized: false
