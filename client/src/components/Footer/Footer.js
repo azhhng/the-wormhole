@@ -4,7 +4,7 @@ import './Footer.css'
 function Footer() {
     return (
         <div className="footer-container">
-            <h3><a href="https://github.com/azhhng">Created by Alice Zhang.</a></h3>
+            <h3><a href="https://alicez.herokuapp.com/">Created by Alice Zhang.</a></h3>
         </div>
     )
 }
