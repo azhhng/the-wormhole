@@ -1,0 +1,36 @@
+  /* ===== UserProfile CSS ===== */
+
+  .user-header {
+      padding: 10px 20px 10px 20px;
+
+      position: absolute;
+      width: 600px;
+      margin-left: -300px;
+      left: 50%;
+      height: 400px;
+
+      border-radius: 50px;
+      background: linear-gradient(to top left, rgb(76, 85, 212), rgb(163, 27, 61));
+      text-align: center;
+  }
+
+  #info-button {
+      border-radius: 20px;
+      background-color: rgb(29, 31, 141);
+      width: 500px;
+  }
+
+  textarea, select {
+      font-family: monospace;
+      width: 100%;
+      border: 0px;
+      outline: none;
+      background-color: #02007a00;
+      color: #fff;
+      resize: none;
+      margin-top: 30px;
+      cursor: default;
+      color: #fff;
+      letter-spacing: 1.3px;
+      font-size: 17px;
+  }

@@ -1,0 +1,87 @@
+  /* ===== Header CSS ===== */
+
+  .header {
+    margin-right: 40px;
+    margin-top: 50px;
+    transition: 0.3s;
+    min-height: 70px;
+    margin-bottom: 80px;
+  }
+
+  .header>.logo-text {
+    font-size: 35px;
+    color: #fff;
+    cursor: pointer;
+    letter-spacing: 5px;
+    text-align: center;
+  }
+
+  .header>.logo-text>.logo-highlight:hover {
+    cursor: pointer;
+  }
+
+  .searchbar-container {
+    position: absolute;
+    margin-left: -210px;
+    left: 50%;
+  }
+
+  .searchbar>input[type=text], select {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 17px;
+    text-align: center;
+    width: 350px;
+    height: 22px;
+    padding: 8px 10px;
+    border: 2px solid #aa3479fa;
+    outline: none;
+  }
+
+  #search-button {
+    width: 45px;
+    height: 41px;
+    font-size: 15px;
+    margin-left: 10px;
+    float: right;
+  }
+
+  #search-icon {
+    max-width: 40px;
+    max-height: 24px;
+  }
+
+  .header>.header-planet {
+    cursor: pointer;
+    position: absolute;
+    margin-top: 20px;
+    top: 0;
+    z-index: 10;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    background: linear-gradient(to top left, #f7b78c, rgb(151, 8, 44));
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+  }
+
+  .header>#sign-in {
+    margin-left: 30px;
+  }
+
+  .header>#create-account {
+    margin-left: 170px;
+  }
+
+  .header>#profile {
+    margin-left: 310px;
+  }
+
+  .header>.header-planet>h3 {
+    text-align: center;
+    margin-top: 50px;
+    color: #fff;
+  }
+
+  #create-account>h3 {
+    margin-top: 40px;
+    color: #fff;
+  }

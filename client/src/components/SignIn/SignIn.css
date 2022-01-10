@@ -1,0 +1,62 @@
+  /* ===== CreateAccount CSS ===== */
+
+  .signin-container {
+      position: absolute;
+      left: 50%;
+      width: 800px;
+      margin-left: -400px;
+      border-radius: 50px;
+
+      background-color: rgb(97, 78, 150);
+      background: linear-gradient(to top left, rgb(76, 85, 212), rgb(163, 27, 61));
+      text-align: center;
+  }
+
+  .account-button {
+      width: 550px;
+      padding: 13px;
+      margin-bottom: 30px;
+      background-color: rgb(29, 31, 141);
+  }
+
+  .user-info-container {
+      width: 800px;
+      margin-bottom: 30px;
+      padding-top: 30px;
+  }
+
+  .user-form>input[type=text], select {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 17px;
+      text-align: center;
+      width: 550px;
+      height: 55px;
+      padding: 8px 10px;
+      border: 2px solid #aa3479fa;
+      box-sizing: border-box;
+      outline: none;
+      color: #000000;
+      margin-top: 20px;
+  }
+
+  .user-form>input[type=password], select {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 17px;
+      text-align: center;
+      width: 550px;
+      height: 55px;
+      padding: 8px 10px;
+      border: 2px solid #aa3479fa;
+      box-sizing: border-box;
+      outline: none;
+      color: #000000;
+      margin-top: 20px;
+  }
+
+  ::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      font-family: 'Source Code Pro', monospace;
+      color: #000000;
+      opacity: 1;
+      /* Firefox */
+  }

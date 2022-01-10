@@ -1,0 +1,17 @@
+.footer-container {
+    clear: both;
+    position: fixed;
+    height: 90px;
+    margin-top: -90px;
+    bottom: 0
+}
+
+.footer-container>h3>a {
+    color: #fff;
+    background-color: rgb(216, 89, 89);
+    padding: 10px;
+}
+
+.footer-container>h3>a:hover {
+    background-color: rgb(173, 45, 45);
+}

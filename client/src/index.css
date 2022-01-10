@@ -1,0 +1,103 @@
+  /* ===== Index CSS ===== */
+
+  body {
+      margin: 0;
+      margin-left: 40px;
+      font-family: 'Georgia', serif;
+      font-family: 'Source Code Pro', monospace;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background: #0f0936;
+      cursor: default;
+  }
+
+  button {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 20px;
+      letter-spacing: 2px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      color: #F0EEED;
+      background-color: #3f36b9;
+      text-decoration: none;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      width: 90px;
+      transition: 0.1s;
+      box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.151);
+  }
+
+  button:hover {
+      background-color: #ee8580;
+  }
+
+  button:disabled {
+      background-color: #572724;
+      cursor: default;
+      color: rgb(97, 97, 97);
+  }
+
+  h1 {
+      letter-spacing: 10px;
+      font-size: 30px;
+      color: #fff;
+  }
+
+  h2 {
+      font-size: 25px;
+      color: #fff;
+      letter-spacing: 1px;
+  }
+
+  h3 {
+      color: #fff;
+      letter-spacing: 1.3px;
+      font-size: 17px;
+  }
+
+  ::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      font-family: 'Source Code Pro', monospace;
+      color: #3F7567;
+      opacity: 1;
+  }
+
+  ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: #3F7567;
+  }
+
+  /* ===== Scrollbar CSS ===== */
+
+  /* Firefox */
+
+  * {
+      scrollbar-width: thin;
+      scrollbar-color: #325e52 #3F7567;
+  }
+
+  /* Chrome, Edge, and Safari */
+
+  *::-webkit-scrollbar {
+      width: 11px;
+  }
+
+  *::-webkit-scrollbar-track {
+      background: #ffffff00;
+  }
+
+  *::-webkit-scrollbar-thumb {
+      background-color: #e24682;
+      border-radius: 11px;
+      border: 0
+  }
+
+  ::-moz-selection {
+      /* Code for Firefox */
+      background: #e24682;
+  }
+
+  ::selection {
+      background: #ee8580;
+  }

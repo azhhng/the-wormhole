@@ -1,0 +1,36 @@
+  /* ===== HomePage CSS ===== */
+
+  .homepage-container {
+    margin-left: 40px;
+  }
+
+  #create-button {
+    width: 200px;
+    padding: 10px;
+    margin-right: 15px;
+  }
+
+  .planet {
+    position: fixed;
+    left: 880px;
+    top: 30px;
+    z-index: -10;
+    width: 600px;
+    height: 600px;
+    border-radius: 300px;
+    background: linear-gradient(to top left, rgb(98, 139, 252), rgb(175, 55, 85));
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+  }
+
+  /* 
+  .planet-shadow {
+    position: fixed;
+    left: 10px;
+    top: 0px;
+    z-index: -10;
+    width: 1200px;
+    height: 1200px;
+    border-radius: 600px;
+    background-color: rgba(66, 41, 75, 0);
+    box-shadow: 0px 2px 0px 2px rgb(190, 56, 56);
+  } */
