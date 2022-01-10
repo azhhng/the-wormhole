@@ -17,7 +17,7 @@ function SignIn() {
         let username = String(document.getElementById('username-form').value);
         let password = String(document.getElementById('password-form').value);
 
-        fetch('http://localhost:3001/sign-in', {
+        fetch('/sign-in', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

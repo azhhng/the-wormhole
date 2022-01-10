@@ -26,7 +26,7 @@ const SearchResults = () => {
     }, [parameters, setCards])
 
     const fetchURL = (searchURL, type) => {
-        searchURL = 'http://localhost:3001/get-search-results/' + searchURL + "/" + type;
+        searchURL = '/get-search-results/' + searchURL + "/" + type;
         fetch(searchURL)
             .then(response => response.json())
             .then(result => {

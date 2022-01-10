@@ -39,7 +39,7 @@ const Header = () => {
     const toProfile = () => {
         console.log("hello")
         // get current username
-        fetch('http://localhost:3001/get-current-user')
+        fetch('/get-current-user')
             .then(response => response.json())
             .then(result => {
                 // if user is not signed in

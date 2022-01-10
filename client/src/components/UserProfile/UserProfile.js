@@ -7,7 +7,7 @@ const UserProfile = () => {
     const [userData, setUserData] = useState({});
 
     useEffect(() => {
-        fetch('http://localhost:3001/get-user/' + String(username), {
+        fetch('/get-user/' + String(username), {
             method: 'GET'
         })
             .then(response => {

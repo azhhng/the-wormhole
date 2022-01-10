@@ -19,7 +19,7 @@ function BookProfile() {
         // call PostgreSQL for Books to get the book reviews
 
         // call PostgreSQL for Users to get their rating and review
-        fetch('http://localhost:3001/get-book-activity/' + String(identifier))
+        fetch('/get-book-activity/' + String(identifier))
             .then(response => {
                 return response.text();
             })
@@ -84,7 +84,7 @@ function BookProfile() {
             });
 
         // call Google Books API for info
-        fetch("http://localhost:3001/get-google-info/" + identifier)
+        fetch("/get-google-info/" + identifier)
             .then(response => response.json())
             .then(result => {
                 if (result["error"] === "IDNOTFOUND") {
@@ -389,7 +389,7 @@ function BookProfile() {
                 rating = 5;
             }
 
-            fetch('http://localhost:3001/book-read', {
+            fetch('/book-read', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -434,7 +434,7 @@ function BookProfile() {
 
     const read = () => {
         console.log("read()");
-        fetch('http://localhost:3001/book-read', {
+        fetch('/book-read', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -459,7 +459,7 @@ function BookProfile() {
 
     const unread = () => {
         console.log("unread()");
-        fetch('http://localhost:3001/delete-book-read', {
+        fetch('/delete-book-read', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
