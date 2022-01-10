@@ -3,12 +3,15 @@ const dotenv = require('dotenv');
 const axios = require('axios');
 dotenv.config();
 
+const isProduction = process.env.NODE_ENV === "production";
+const connectionString = `postgresql://${process.env.PSQL_DATABASE_USERNAME}:${process.env.PSQL_DATABASE_PASSWORD}@${process.env.PSQL_DATABASE_HOST}:${process.env.PSQL_DATABASE_PORT}/${process.env.PSQL_DATABASE_NAME}`;
+
+// comment out ssl in development
 const pool = new Pool({
-    user: process.env.PSQL_DATABASE_USERNAME,
-    host: 'localhost',
-    database: process.env.PSQL_DATABASE_NAME,
-    password: process.env.PSQL_DATABASE_PASSWORD,
-    port: 5432,
+    connectionString: isProduction ? process.env.DATABASE_URL : connectionString,
+    ssl: {
+        rejectUnauthorized: false,
+    },
 });
 
 const getGoogleInfo = (identifier) => {

@@ -3,6 +3,7 @@ import { Server as HTTPServer } from "http";
 import { Axios } from "axios";
 import * as express from "express";
 import { User } from "./user";
+import path = require("path");
 
 export class WormholeServer {
     private httpServer: HTTPServer;
@@ -26,11 +27,13 @@ export class WormholeServer {
         this.book_model = require('./postgresql/book_model');
 
         this.app.use(function (req, res, next) {
-            res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+            res.setHeader('Access-Control-Allow-Origin', 'https://thewormhole.herokuapp.com/');
             res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
             res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers');
             next();
         });
+        this.app.use('/favicon.ico', express.static('img/favicon.ico'));
+        this.app.use(express.static(path.join(__dirname, '../client/build')));
 
         this.httpServer = require('http').createServer(this.app);
         this.configureRoutes();
@@ -162,6 +165,10 @@ export class WormholeServer {
                 .catch((error: any) => {
                     res.status(500).send(error);
                 })
+        });
+
+        this.app.get('*', (req, res) => {
+            res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
         });
     }
 
