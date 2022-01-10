@@ -10,8 +10,9 @@ const connectionString = `postgresql://${process.env.PSQL_DATABASE_USERNAME}:${p
 const pool = new Pool({
     connectionString: isProduction ? process.env.DATABASE_URL : connectionString,
     ssl: {
-        rejectUnauthorized: false,
-    },
+        require: true,
+        rejectUnauthorized: false
+    }
 });
 
 const getUsers = () => {
@@ -29,8 +30,7 @@ const getUser = (username) => {
     return new Promise(function (resolve, reject) {
         pool.query(`SELECT * FROM "users" WHERE username = $1`, [username], (error, results) => {
             if (error) {
-                console.log("HELLO")
-                console.log(error)
+                console.log(error);
                 reject(error)
             }
             resolve(results.rows);
@@ -60,6 +60,7 @@ const signIn = (body) => {
 }
 
 const createUser = (body) => {
+    console.log("creating new user")
     return new Promise(function (resolve, reject) {
         const { username, password, email } = body;
 

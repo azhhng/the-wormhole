@@ -43,6 +43,8 @@ export class WormholeServer {
     private configureRoutes(): void {
 
         this.app.post('/create-user', (req, res) => {
+            console.log("creating user --server.ts")
+
             if (this.current_user !== undefined) {
                 return res.json("you are already signed in");
             }

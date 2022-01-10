@@ -10,8 +10,9 @@ const connectionString = `postgresql://${process.env.PSQL_DATABASE_USERNAME}:${p
 const pool = new Pool({
     connectionString: isProduction ? process.env.DATABASE_URL : connectionString,
     ssl: {
-        rejectUnauthorized: false,
-    },
+        require: true,
+        rejectUnauthorized: false
+    }
 });
 
 const getGoogleInfo = (identifier) => {
