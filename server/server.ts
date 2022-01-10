@@ -41,9 +41,6 @@ export class WormholeServer {
     }
 
     private configureRoutes(): void {
-        this.app.get('/', function (req, res) {
-            res.json("hello from server.ts");
-        });
 
         this.app.post('/create-user', (req, res) => {
             if (this.current_user !== undefined) {
