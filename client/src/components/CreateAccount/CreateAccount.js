@@ -26,7 +26,7 @@ const CreateAccount = () => {
             return;
         }
 
-        fetch('http://localhost:3001/create-user', {
+        fetch('/create-user', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
