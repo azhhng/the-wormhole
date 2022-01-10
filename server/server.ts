@@ -32,10 +32,11 @@ export class WormholeServer {
             res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers');
             next();
         });
+        this.httpServer = require('http').createServer(this.app);
+
         this.app.use('/favicon.ico', express.static('img/favicon.ico'));
         this.app.use(express.static(path.join(__dirname, '../client/build')));
 
-        this.httpServer = require('http').createServer(this.app);
         this.configureRoutes();
     }
 
