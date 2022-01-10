@@ -37,6 +37,7 @@ const CreateAccount = () => {
                 return response.text();
             })
             .then(data => {
+                console.log(data);
                 if (JSON.parse(data)["code"] === "23505") {
                     console.log("23505 error code");
                     console.log("Your username is already taken.");
