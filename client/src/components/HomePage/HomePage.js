@@ -8,7 +8,7 @@ const HomePage = () => {
 
     return (
         <div className="homepage-container">
-            {/* <div className="planet"></div> */}
+            <div className="planet"></div>
         </div>
     );
 }
